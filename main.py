@@ -1,16 +1,15 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def superhero():
+    url = "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json"
+    response = requests.get(url=url)
+    all_hero = response.json()
+    hero_name = ['Hulk', 'Captain America', 'Thanos', 'Iron Man', 'Thor']
+    intellegence_hero = {}
+    for hero in all_hero:
+        if hero['name'] in hero_name:
+            intellegence_hero[hero['name']] = hero['powerstats']['intelligence']
+    print(intellegence_hero.items())
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    superhero()

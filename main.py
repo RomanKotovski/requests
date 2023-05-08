@@ -42,6 +42,6 @@ class YaUploader:
 
 if __name__ == '__main__':
     filename = 'KungFuKitty111.jpg'  #название файла на я.диске
-    token = 'y0_AgAAAAAzTKoOAADLWwAAAADirnYaBAZfFooQRhSQlYuCtLWT-UTLq6U'   #токен
+    token = ''   #токен
     disk_file_path = "C:\\Users\\Roma\\OneDrive\\Рабочий стол\\Homework\\requests\\KungFuKitty.jpg"  #путь к файлу на пк
     result = YaUploader(token).upload_file_to_disk(filename, disk_file_path)

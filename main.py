@@ -51,7 +51,8 @@ class YaUploader:
 
 if __name__ == '__main__':
     # Получить путь к загружаемому файлу и токен от пользователя
-    filename = "\README.md"
+    filename = 'C:\\Users\\Roma\\OneDrive\\Рабочий стол\\Homework\\requests\\README.md'
     token = 'y0_AgAAAAAzTKoOAADLWwAAAADirnYaBAZfFooQRhSQlYuCtLWT-UTLq6U'
+    disk_file_path = "readme.md"
     uploader = YaUploader(token)
-    result = uploader.upload_file_to_disk(filename)
+    result = uploader.upload_file_to_disk(disk_file_path, filename)
